@@ -3,9 +3,10 @@ import pygame
 import random
 
 pygame.init()
-
+# Display size
 screen = pygame.display.set_mode((1000,700))
 screen.fill((255,255,255))
+#  algotithm name 
 pygame.display.set_caption('Merge Sort Visual')
 
 

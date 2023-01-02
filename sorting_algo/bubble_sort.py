@@ -1,7 +1,6 @@
 import random
 import pygame
 
-
 pygame.init()
 
 screen = pygame.display.set_mode((700,700))
@@ -12,20 +11,22 @@ arr = []
 width = 20
 x= 40
 y= 40
-
+# generating a randon array with length 20
 def ResetArr():
     for i in range(20):
         x= 200*(random.random() + 0.2)
         arr.append(x)
+# updating display with suitable bar
 def updateDisplay():
     pygame.display.update()
-
+# showing array with rectangular bar
 def ShowArr():
     for i in range(20):
-        pygame.draw.rect(screen , (255,255,0) , (x+ 30*i ,y , width , arr[i]))
+        pygame.draw.rect(screen , (60,60,60) , (x+ 30*i ,y , width , arr[i]))
     updateDisplay()
-
+# fornt used
 font = pygame.font.SysFont('comisson',25)
+
 def start_instruction():
     text = font.render('Please Press Enter to start !' , True ,(80, 199, 88))
     screen.blit(text ,(100,500))
@@ -34,7 +35,7 @@ def start_instruction():
 def Reset_instruction():
     text = font.render('Please Press R to reset the array values!' , True ,(80,199,88))
     screen.blit(text ,(100,550))
-    updateDisplay
+    updateDisplay()
 
 
 def Bubble_sort():
